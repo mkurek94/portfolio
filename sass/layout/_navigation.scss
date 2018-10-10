@@ -1,0 +1,115 @@
+nav {
+    padding: 1rem 3rem;
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 2.4rem;
+    color: $color-text-secondary;
+    z-index: 10000;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    @include respond(tab-port) {
+        font-size: 2rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1.8rem;
+        padding: .5rem 1rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 1.4rem;
+        padding-top: .2rem;
+    }
+
+    a,
+    a:focus,
+    a:active {
+        color: $color-text-secondary;
+        text-decoration: none;
+        -webkit-transition: .2s;
+        transition: .2s;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $color-green;
+    }
+
+    .info__box {
+        padding: 2rem;
+
+        @include respond(small-phone) {
+            padding: 1.5rem .5rem;
+        }
+    }
+
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        li {
+            list-style: none;
+            padding: 2rem;
+            -webkit-transition: .4s;
+            transition: .4s;
+
+            @include respond(tab-port) {
+                padding: 2rem 1.5rem;
+            }
+
+            @include respond(phone) {
+                padding: 2rem 1rem;
+            }
+
+            @include respond(small-phone) {
+                padding: 1.5rem .5rem;
+            }
+        }
+    }
+}
+
+.sticky {
+    // background-color: rgba($color-purple-light, .5);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($color-purple-dark, .6)), to(rgba($color-purple-light, .6)));
+    background-image: linear-gradient(to bottom, rgba($color-purple-dark, .6), rgba($color-purple-light, .6));
+    position: fixed;
+    border-bottom: 2px solid rgba($color-green, .5);
+}
+
+.mobile__nav-icon {
+    display: none;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+
+    @include respond(tab-port) {
+        display: block;
+    }
+
+    @include respond(small-phone) {
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,28 @@
+.photo__box {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background-image: url(../img/profile.jpg);
+    background-size: cover;
+    background-position-y: -4rem;
+    border: .6rem solid $color-text-secondary;
+
+    @include respond(tab-port) {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    @include respond(phone) {
+        width: 15rem;
+        height: 15rem;
+        background-position-y: -1.5rem;
+        margin: 0 auto;
+    }
+
+    @include respond(small-phone) {
+        width: 15rem;
+        height: 15rem;
+        margin-top: 3rem;
+        background-position-y: -1rem;
+    }
+}

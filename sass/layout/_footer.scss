@@ -1,0 +1,277 @@
+footer {
+    color: $color-text-secondary;
+    font-size: 1.6rem;
+    background-image: $gradient-purple;
+    color: $color-text-secondary;
+    padding-top: 10rem;
+
+    @include respond(phone) {
+        padding-top: 5rem;
+    }
+
+    .sub-description {
+        text-align: center;
+        font-size: 2.4rem;
+        padding: 0 1rem;
+        padding-bottom: 4rem;
+        span{
+            font-size: 2rem;
+        }
+    }
+
+        .contact__form {
+            width: 70%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            margin: 0 auto;
+
+            input {
+                &[type="text"],
+                &[type="email"] {
+                    text-transform: none;
+                    border: none;
+                    border-bottom: 2px solid $color-text-secondary;
+                    background: transparent;
+                    color: $color-text-secondary;
+                    width: 40%;
+                    -ms-flex-preferred-size: 48%;
+                        flex-basis: 48%;
+                    font-size: 2rem;
+                    -webkit-transition: .3s;
+                    transition: .3s;
+
+                    @include respond(tab-port) {
+                        font-size: 1.7rem;
+                    }
+
+                    @include respond(phone) {
+                        font-size: 1.5rem;
+                    }
+
+                    &:focus {
+                        border-bottom: 3px solid $color-green;
+                        outline: none;
+
+                        &::-webkit-input-placeholder {
+                            -webkit-transition: .3s;
+                            transition: .3s;
+                            color: $color-green;
+                            -webkit-transform: translateX(1rem);
+                                    transform: translateX(1rem);
+                        }
+
+                        &:-ms-input-placeholder {
+                            -webkit-transition: .3s;
+                            transition: .3s;
+                            color: $color-green;
+                            transform: translateX(1rem);
+                        }
+
+                        &::placeholder {
+                            -webkit-transition: .3s;
+                            transition: .3s;
+                            color: $color-green;
+                            -webkit-transform: translateX(1rem);
+                                    transform: translateX(1rem);
+                        }
+                    }
+
+                    &::-webkit-input-placeholder {
+                        color: $color-text-secondary;
+                    }
+
+                    &:-ms-input-placeholder {
+                        color: $color-text-secondary;
+                    }
+
+                    &::placeholder {
+                        color: $color-text-secondary;
+                    }
+                }
+            }
+
+            textarea {
+                border: none;
+                border-bottom: 2px solid $color-text-secondary;
+                background: transparent;
+                resize: none;
+                color: $color-text-secondary;
+                -ms-flex-preferred-size: 100%;
+                    flex-basis: 100%;
+                margin-top: 2rem;
+                margin-bottom: 4.5rem;
+                font-size: 1.8rem;
+                -webkit-transition: .3s;
+                transition: .3s;
+
+                @include respond(phone) {
+                    font-size: 1.5rem;
+                }
+
+                &:focus {
+                    border-bottom: 3px solid $color-green;
+                    outline: none;
+
+                    &::-webkit-input-placeholder {
+                        -webkit-transition: .3s;
+                        transition: .3s;
+                        color: $color-green;
+                        -webkit-transform: translateY(4rem);
+                                transform: translateY(4rem);
+                    }
+
+                    &:-ms-input-placeholder {
+                        -webkit-transition: .3s;
+                        transition: .3s;
+                        color: $color-green;
+                        transform: translateY(4rem);
+                    }
+
+                    &::placeholder {
+                        -webkit-transition: .3s;
+                        transition: .3s;
+                        color: $color-green;
+                        -webkit-transform: translateY(4rem);
+                                transform: translateY(4rem);
+                    }
+                }
+
+                &::-webkit-input-placeholder {
+                    color: $color-text-secondary;
+                }
+
+                &:-ms-input-placeholder {
+                    color: $color-text-secondary;
+                }
+
+                &::placeholder {
+                    color: $color-text-secondary;
+                }
+            }
+        }
+
+        hr {
+            margin-bottom: 5rem;
+            border: 1px solid $color-text-secondary;
+        }
+
+        .contact {
+            padding-top: 7rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            font-size: 2.4rem;
+            padding-bottom: 6rem;
+
+            @include respond(tab-port) {
+                font-size: 1.8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 1.2rem;
+            }
+
+            @include respond(small-phone) {
+                font-size: 1rem;
+            }
+
+            i {
+                padding-right: 1.5rem;
+                background-color: $color-green;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+
+                @include respond(tab-port) {
+                    padding-right: 1rem;
+                }
+
+                @include respond(phone) {
+                    padding-right: .5rem;
+                }
+            }
+        }
+
+    .footer-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 1.5rem 4rem;
+        border-top: 2px solid rgba($color-text-secondary, .4);
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.2rem;
+            padding: 1.5rem 1rem;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+
+        .copyright {
+            padding: .5rem 0;
+            a {
+                text-decoration: none;
+                color: $color-green;
+            }
+        }
+
+        .links {
+            a,
+            a:active,
+            a:visited {
+                color: $color-text-secondary;
+            }
+
+            i {
+                padding: 0 .5rem;
+                font-size: 4rem;
+                -webkit-transition: .3s;
+                transition: .3s;
+
+                @include respond(phone) {
+                    font-size: 2.5rem;
+                    padding: 0 .2rem;
+                }
+
+                @include respond(small-phone) {
+                    font-size: 2rem;
+                }
+
+                &:hover {
+                    color: $color-green;
+                }
+            }
+
+        }
+
+
+    }
+
+}

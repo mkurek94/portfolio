@@ -1,0 +1,92 @@
+header {
+
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    .heading {
+        text-align: right;
+        position: absolute;
+        right: 15%;
+        top: 55%;
+        z-index: 1000;
+        -webkit-animation-name: moveInLeft;
+                animation-name: moveInLeft;
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+
+        @include respond(phone) {
+            right: 5%;
+        }
+    }
+
+    .parallax-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+
+        .parallax {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-position: center;
+            background-size: cover;
+            z-index: 100;
+
+            &__mobile {
+                background-image: url(../img/parallax/mobile.jpg);
+                background-position: center;
+                display: none;
+
+                @include respond(tab-port) {
+                    display: block;
+                }
+            }
+
+            &-sky {
+                background-image: url(../img/parallax/parallax-bg.png);
+                background-attachment: fixed;
+                background-position-y: bottom;
+                background-size: cover;
+            }
+
+            &-1 {
+                background-image: url(../img/parallax/parallax07.png);
+            }
+
+            &-2 {
+                background-image: url(../img/parallax/parallax06.png);
+            }
+
+            &-3 {
+                background-image: url(../img/parallax/parallax05.png);
+            }
+
+            &-4 {
+                background-image: url(../img/parallax/parallax03.png);
+            }
+
+            &-5 {
+                background-image: url(../img/parallax/parallax04.png);
+            }
+
+            &-6 {
+                background-image: url(../img/parallax/parallax02.png);
+            }
+
+            &-7 {
+                background-image: url(../img/parallax/parallax01.png);
+                width: 100%;
+            }
+
+        }
+    }
+
+    .parallax__main {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+}

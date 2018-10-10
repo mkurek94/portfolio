@@ -1,0 +1,91 @@
+h1 {
+    font-size: 7rem;
+    color: $color-text-secondary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($color-purple-dark), color-stop(15%, $color-purple-dark), to($color-purple-light));
+    background-image: linear-gradient(to bottom, $color-purple-dark 0%, $color-purple-dark 15%, $color-purple-light);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    @include respond(tab-land) {
+        font-size: 6.5rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 6rem;
+    }
+
+    @include respond(phone) {
+        font-size: 4.5rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 3.5rem;
+    }
+}
+
+h2 {
+    font-size: 5.6rem;
+    color: #FEF8E7;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FEF8E7), to(#EACCC4));
+    background-image: linear-gradient(to bottom, #FEF8E7, #EACCC4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    @include respond(tab-port) {
+        font-size: 5rem;
+    }
+
+    @include respond(phone) {
+        font-size: 3.5rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto;
+
+    @include respond(tab-land) {
+        font-size: 3.3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.8rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 2.3rem;
+    }
+}
+
+h4 {
+    font-size: 3rem;
+
+    @include respond(tab-port) {
+        font-size: 2.6rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.3rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 2rem;
+    }
+}
+
+hr {
+    width: 10%;
+    border: 1px solid $color-purple-dark;
+    margin: 2rem auto;
+
+    @include respond(phone) {
+        margin: 1rem auto;
+    }
+}
